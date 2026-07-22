@@ -12,7 +12,7 @@ export default function Contact() {
     e.preventDefault();
     setStatus('Sending...');
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/contact`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
